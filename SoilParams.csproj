@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CenterSpace.NMath.Standard.Windows.X64" Version="7.4.0.11" Condition="$([MSBuild]::IsOsPlatform('Windows'))" />
+    <PackageReference Include="CenterSpace.NMath.Standard.Linux.X64" Version="7.4.0.11" Condition="$([MSBuild]::IsOsPlatform('Linux'))" />
+  </ItemGroup>
+
+</Project>
