@@ -11,9 +11,9 @@ namespace SoilParams
     {
         public BaseModel                  WRCModel               { get; set; }
         public List<double>               PressureHeads          { get; private set; }
-        public List<double>               MeasuredWaterContents  { get; private set; } = new();
-        public List<double>               PredictedWaterContents { get; private set; } = new();
-        public Dictionary<string, double> Params                 { get; private set; } = new();
+        public List<double>               MeasuredWaterContents  { get; private set; } = new List<double>();
+        public List<double>               PredictedWaterContents { get; private set; } = new List<double>();
+        public Dictionary<string, double> Params                 { get; private set; } = new Dictionary<string, double>();
         public List<double>               InitialGuess           { get; private set; }
         public Statistics                 Stats                  { get; set; }
 
